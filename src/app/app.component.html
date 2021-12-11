@@ -1,0 +1,11 @@
+<div id="main-content">
+  <!-- <dow-jones-performance></dow-jones-performance> -->
+  <div class="scrollbar-content">
+    <vg-header></vg-header>
+    <vg-profile id="profile"></vg-profile>
+
+    <div class="router-wrapper" [@fadeInLeftOut]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

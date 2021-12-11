@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.router-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: var(--app-vg-card-width);
+  height: var(--app-vg-card-height);
+  position: relative;
+}
+#main-content {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  .scrollbar-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  #main-content {
+    //   zoom: 0.7;
+  }
+}
+
+@media (max-width: 992px) {
+  .router-wrapper {
+    justify-content: center;
+  }
+  #main-content {
+    .scrollbar-content {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 0 0 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #profile {
+    display: none;
+  }
+}

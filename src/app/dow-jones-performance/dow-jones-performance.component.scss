@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.ticker-bar {
+  display: block;
+  width: 100vw;
+  padding: 1em 0;
+  background-color: #fff;
+  color: #1e2235;
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.03);
+  min-height: 50px;
+  .marquee-text-wrap {
+    overflow: hidden;
+    .marquee-text-content {
+      width: 100000px;
+      .marquee-text-text {
+        --move-initial: calc(-25% + var(--offset));
+        --move-final: calc(-50% + var(--offset));
+        --offset: 20vw;
+        display: flex;
+        animation-duration: 75s;
+        animation-name: marquee;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        float: left;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}

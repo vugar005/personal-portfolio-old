@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+.resume-embed-wrapper {
+  width: 100%;
+  height: 570px;
+  .resumeFrame {
+    // width: 159%;
+    // height: 292%;
+    zoom: 0.75;
+
+    // overflow: hidden;
+    // border: 0;
+    // position: relative;
+    // transform: scale(0.65);
+    // transform-origin: 0 0;
+  }
+}
+.vg-card {
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .resume-embed-wrapper {
+    .resumeFrame {
+      width: 187%;
+      transform: scale(0.54);
+    }
+  }
+}

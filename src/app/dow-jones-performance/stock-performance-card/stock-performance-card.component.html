@@ -1,0 +1,6 @@
+<div class="ticker-item" [title]="stock.companyName">
+  <div class="ticker-item__symbol">{{ stock?.ticker }}</div>
+  <div class="ticker-item__price">{{ stock.price }}</div>
+  <div class="ticker-item__change" [ngClass]="stock.changes > 0 ? 'text-green' : 'text-red'">{{ stock.changes }}</div>
+  <div class="ticker-item__percent" [ngClass]="stock.changes > 0 ? 'text-green' : 'text-red'">{{ stock.changesPercentage }}</div>
+</div>

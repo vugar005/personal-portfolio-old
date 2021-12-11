@@ -1,0 +1,40 @@
+<div class="profile">
+  <div class="profile__header"></div>
+  <div class="profile__info">
+    <div class="profile__info__image">
+      <img src="./assets/img/profile.jpg" />
+    </div>
+    <div class="profile__info__title">Vugar Abdullayev</div>
+    <div class="profile__info__subtitle">Front End Angular Developer</div>
+    <div class="profile__info__links">
+      <a class="social-link" href="https://twitter.com/Vugar005" target="_blank"><i class="fab fa-twitter"></i></a>
+
+      <a class="social-link" href="http://github.com/vugar005" target="_blank"> <i class="fab fa-github"></i></a>
+
+      <a class="social-link" href="https://www.facebook.com/profile.php?id=100007074375925" target="_blank">
+        <i class="fab fa-facebook-f"></i
+      ></a>
+
+      <a class="social-link" href="https://www.linkedin.com/in/vugar-abdullayev-13451469" target="_blank">
+        <i class="fab fa-linkedin-in"></i
+      ></a>
+    </div>
+  </div>
+  <div class="profile__footer">
+    <a class="link" href="https://www.topcv.me/cv/fe6e967228f067aa0e216b2418f154e9" target="_blank">
+      <div class="link__text">DOWNLOAD CV</div>
+      <div class="link__icon">
+        <i class="fas fa-download"></i>
+      </div>
+    </a>
+
+    <a class="link" [routerLink]="['/contact']">
+      <div class="link__text">CONTACT ME</div>
+      <div class="link__icon">
+        <i class="fas fa-phone"></i>
+      </div>
+    </a>
+  </div>
+</div>
+
+<vg-audio-player *ngIf="false"></vg-audio-player>
