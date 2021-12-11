@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "personal-portfolio-cddec": {
+      "hosting": {
+        "personal-portfolio": [
+          "personal-portfolio-cddec"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "personal-portfolio-cddec"
+  }
+}
