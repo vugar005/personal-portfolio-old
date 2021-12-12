@@ -22,7 +22,7 @@ export class WorksComponent implements OnInit {
     this.getExperiences();
   }
 
-  private getExperiences() {
+  private getExperiences(): void {
     const expCollection = collection(this.fireStore, 'experiences');
     this.experiences$ = collectionData(expCollection) as Observable<Experience[]>;
   }
