@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'vg-contact',
@@ -6,4 +7,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactComponent {}
+export class ContactComponent implements OnInit {
+  constructor(private title: Title) {}
+
+  public ngOnInit(): void {
+    this.setMetaTags();
+  }
+
+  private setMetaTags(): void {
+    this.title.setTitle(`Contact Vugar`);
+  }
+}

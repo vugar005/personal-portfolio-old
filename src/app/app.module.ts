@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AboutModule } from './about/about.module';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
@@ -19,7 +17,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
   imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
-    AboutModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())],
   providers: [],
