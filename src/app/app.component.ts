@@ -10,14 +10,11 @@ import { fadeInLeftOut } from './animations';
   animations: [trigger('fadeInLeftOut', [transition('* => *', useAnimation(fadeInLeftOut))])],
 })
 export class AppComponent {
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: string
-  ) {
+  constructor(@Inject(PLATFORM_ID) private platformId: string) {
     if (isPlatformBrowser(this.platformId)) {
       // eslint-disable-next-line
-     (document.querySelector('body')!.style as any).zoom = 1 / window.devicePixelRatio;
+      (document.querySelector('body')!.style as any).zoom = 1 / window.devicePixelRatio;
     }
-
   }
   public getState(outlet: any): string {
     return outlet.activatedRouteData.state;

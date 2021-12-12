@@ -23,8 +23,7 @@ export class AboutComponent implements OnInit {
       { name: 'og:description', content: 'Personal Webpage of Vugar Abdullayev' },
       {
         name: 'og:image',
-        content:
-          'https://raw.githubusercontent.com/vugar005/personal-portfolio/master/src/assets/img/desert.webp',
+        content: 'https://raw.githubusercontent.com/vugar005/personal-portfolio/master/src/assets/img/desert.webp',
       },
     ]);
   }

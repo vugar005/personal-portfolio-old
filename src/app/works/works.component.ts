@@ -15,10 +15,7 @@ import { Experience } from './models/experience.model';
 export class WorksComponent implements OnInit {
   public experiences$!: Observable<Experience[]>;
 
-  constructor(
-    private fireStore: Firestore,
-    private title: Title,
-  ){}
+  constructor(private fireStore: Firestore, private title: Title) {}
 
   public ngOnInit(): void {
     this.setMetaTags();
