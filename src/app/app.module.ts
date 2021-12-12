@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AboutModule } from './about/about.module';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
@@ -13,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ProfileComponent, AudioPlayerComponent, BubblesComponent],
