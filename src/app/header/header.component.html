@@ -1,36 +1,36 @@
 <div class="header">
-  <div class="header__link" (click)="onNavChange('about')" [routerLink]="['/about']" routerLinkActive="active">
+  <a class="header__link" aria-label="ABOUT" (click)="onNavChange('about')" [routerLink]="['/about']" routerLinkActive="active">
     <div class="header__link__image">
       <i class="fas fa-user"></i>
     </div>
     <div class="header__link__title">ABOUT</div>
-  </div>
+  </a>
 
-  <div class="header__link" (click)="onNavChange('resume')" [routerLink]="['/resume']" routerLinkActive="active">
+  <a class="header__link" aria-label="RESUME" (click)="onNavChange('resume')" [routerLink]="['/resume']" routerLinkActive="active">
     <div class="header__link__image">
       <i class="fab fa-angular"></i>
     </div>
     <div class="header__link__title">RESUME</div>
-  </div>
+  </a>
 
-  <div class="header__link" (click)="onNavChange('works')" [routerLink]="['/works']" routerLinkActive="active">
+  <a class="header__link" aria-label="WORKS" (click)="onNavChange('works')" [routerLink]="['/works']" routerLinkActive="active">
     <div class="header__link__image">
       <i class="fas fa-paint-brush"></i>
     </div>
     <div class="header__link__title">WORKS</div>
-  </div>
+  </a>
 
-  <a class="header__link" [href]="blogUrl" target="_blank">
+  <a class="header__link" [href]="blogUrl" target="_blank" rel="noreferrer" aria-label="BLOG">
     <div class="header__link__image">
       <i class="fas fa-blog"></i>
     </div>
     <div class="header__link__title">BLOG</div>
   </a>
 
-  <div class="header__link" (click)="onNavChange('contact')" [routerLink]="['/contact']" routerLinkActive="active">
+  <a class="header__link" (click)="onNavChange('contact')" [routerLink]="['/contact']" aria-label="CONTACT" routerLinkActive="active">
     <div class="header__link__image">
       <i class="fas fa-at"></i>
     </div>
     <div class="header__link__title">CONTACT</div>
-  </div>
+  </a>
 </div>

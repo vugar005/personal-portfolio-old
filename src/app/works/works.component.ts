@@ -15,17 +15,14 @@ import { Experience } from './models/experience.model';
 export class WorksComponent implements OnInit {
   public experiences$!: Observable<Experience[]>;
 
-  constructor(
-    private fireStore: Firestore,
-    private title: Title,
-  ){}
+  constructor(private fireStore: Firestore, private title: Title) {}
 
   public ngOnInit(): void {
     this.setMetaTags();
     this.getExperiences();
   }
 
-  private getExperiences() {
+  private getExperiences(): void {
     const expCollection = collection(this.fireStore, 'experiences');
     this.experiences$ = collectionData(expCollection) as Observable<Experience[]>;
   }

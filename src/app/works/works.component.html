@@ -9,9 +9,11 @@
             *ngFor="let experience of experiences$ | async"
             [href]="experience.url"
             target="_blank"
+            rel="noreferrer"
+            [attr.aria-label]="experience?.title"
           >
             <div class="recent-work__cover">
-              <img [src]="experience.imageUrl" />
+              <img [src]="experience.imageUrl" [alt]="experience?.title" />
             </div>
             <div class="recent-work__description">
               <div class="recent-work__description__title">{{ experience.title }}</div>

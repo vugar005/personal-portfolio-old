@@ -13,7 +13,7 @@ export const environment = {
     authDomain: 'personal-portfolio-cddec.firebaseapp.com',
     messagingSenderId: '907083366382',
     measurementId: 'G-GTV89S20BZ',
-  }
+  },
 };
 
 /*

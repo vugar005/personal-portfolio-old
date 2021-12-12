@@ -30,7 +30,7 @@
     background-size: cover;
     border-radius: var(--app-border-radius) var(--app-border-radius) 0 0;
     &:before {
-      content: '';
+      // content: '';
       position: absolute;
       left: -25%;
       bottom: -198px;
@@ -40,7 +40,7 @@
       transform: rotate(12deg);
     }
     &:after {
-      content: '';
+      //  content: '';
       position: absolute;
       bottom: -198px;
       width: 700px;
