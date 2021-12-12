@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ProfileComponent],
@@ -16,6 +17,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
+    AboutModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
