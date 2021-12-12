@@ -16,7 +16,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ProfileComponent, AudioPlayerComponent, BubblesComponent],
-  imports: [BrowserModule,
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     AboutModule,
