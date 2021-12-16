@@ -10,7 +10,7 @@ import { Stock } from './models/stock.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DowJonesPerformanceComponent implements OnInit {
-  public mostActiveStocks: Stock[];
+  public mostActiveStocks?: Stock[];
   constructor(private httpClient: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
