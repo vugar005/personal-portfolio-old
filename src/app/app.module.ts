@@ -9,15 +9,18 @@ import { ProfileComponent } from './profile/profile.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { BubblesComponent } from './bubbles/bubbles.component';
+import { DowJonesPerformanceModule } from './dow-jones-performance/dow-jones-performance.module';
 import { AboutModule } from './about/about.module';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfileComponent],
+  declarations: [AppComponent, HeaderComponent, ProfileComponent, BubblesComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     AboutModule,
+    DowJonesPerformanceModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],

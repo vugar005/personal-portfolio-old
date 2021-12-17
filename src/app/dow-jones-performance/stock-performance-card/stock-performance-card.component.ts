@@ -8,5 +8,5 @@ import { Stock } from '../models/stock.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StockPerformanceCardComponent {
-  @Input() stock: Stock;
+  @Input() stock!: Stock;
 }
