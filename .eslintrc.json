@@ -2,6 +2,9 @@
   "root": true,
   "ignorePatterns": ["projects/**/*"],
   "plugins": ["prettier"],
+  "extends": [
+    "plugin:@angular-eslint/template/recommended"
+  ],
   "overrides": [
     {
       "files": ["*.ts"],
