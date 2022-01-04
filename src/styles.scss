@@ -14,20 +14,21 @@ body {
   height: 100%;
   overflow-x: hidden;
   background: #001935;
-  zoom: 0.666;
 }
-p,
-div {
-  color: #171717;
-}
+
 :root {
   --primary-color: #002949;
-  //  --primary-color: #78cc6d;
   --app-border-radius: 4px;
   --app-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-  --app-vg-card-width: 620px;
-  --app-vg-card-height: 570px;
-  --app-profile-width: 440px;
+  --app-profile-width: 100%;
+  --app-profile-height: 100%;
+  --app-vg-card-width: 375px;
+  --app-vg-card-height: calc(var(--app-profile-height) - 24px);
+  --app-profile-header-height: 250px;
+  --app-profile-padding: 210px 50px 0 50px;
+  --app-aero-background: rgba(255, 255, 255, 0.08);
+  --app-aero-backdrop-filter: blur(35px);
+  --app-text-color: #fff;
 }
 
 .border-line-v {
@@ -60,26 +61,28 @@ div {
 
 .page-wrapper {
   width: var(--app-vg-card-width);
+  max-width: 650px;
   height: var(--app-vg-card-height);
   box-shadow: var(--app-box-shadow);
   border-radius: 0 var(--app-border-radius) var(--app-border-radius) 0;
-  background: #ffffff;
+  background: var(--app-aero-background);
+  backdrop-filter: var(--app-aero-backdrop-filter);
   margin-top: 15px;
 }
 
 .vg-card {
   width: var(--app-vg-card-width);
+  max-width: 650px;
   height: var(--app-vg-card-height);
   padding: 30px;
   overflow-y: auto;
+  color: var(--app-text-color);
   .vg-card__content {
-    color: #000;
     .vg-card__content__title {
       margin: 0 0 15px 0;
       padding: 0 0 5px 0;
       position: relative;
       font-size: 17px;
-      color: #171717;
       line-height: 21px;
       font-weight: 500;
       &::after {
@@ -99,41 +102,31 @@ div {
   }
 }
 
-@media (max-width: 1199px) {
-  :root {
-    --app-vg-card-width: 455px;
-  }
+/*
+ *  STYLE 7
+ */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
 }
 
-@media (max-width: 992px) {
-  :root {
-    --app-vg-card-width: 406px;
-  }
-  .vg-card {
-    height: auto;
-  }
-  .page-wrapper {
-    height: auto;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-  :root {
-    --app-profile-width: 440px;
-  }
-}
-
-@media (max-width: 576px) {
-  :root {
-    --app-profile-width: 90vw;
-    --app-vg-card-width: 350px;
-  }
-  .info-list {
-    flex-direction: column;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(3, 67, 116)),
+    color-stop(0.72, rgb(2, 55, 95)),
+    color-stop(0.86, rgb(0, 41, 73))
+  );
 }
 
 #starfield {
@@ -143,4 +136,42 @@ div {
   z-index: 1;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 992px) {
+  :root {
+    --app-profile-width: 33vw;
+    --app-profile-height: 60vh;
+    --app-profile-padding: 22vh 4vw 0 4vw;
+    --app-vg-card-width: 45vw;
+  }
+}
+
+@media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.25) {
+  :root {
+    --app-profile-height: 75vh;
+  }
+}
+
+@media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  :root {
+    --app-profile-padding: 14vh 4vw 0 4vw;
+    --app-profile-header-height: 200px;
+    --app-profile-width: 28vw;
+    --app-vg-card-width: 40vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --app-profile-width: 28vw;
+    --app-profile-height: 67vh;
+    --app-vg-card-width: 39vw;
+  }
+}
+
+@media (min-width: 1400px) and (-webkit-min-device-pixel-ratio: 1.25) {
+  :root {
+    --app-profile-height: 75vh;
+  }
 }

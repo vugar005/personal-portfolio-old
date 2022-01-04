@@ -17,9 +17,9 @@ import { AboutModule } from './about/about.module';
   declarations: [AppComponent, HeaderComponent, ProfileComponent, BubblesComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AboutModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AboutModule,
     DowJonesPerformanceModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
