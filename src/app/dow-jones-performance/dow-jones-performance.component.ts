@@ -13,8 +13,12 @@ export class DowJonesPerformanceComponent implements OnInit {
   public mostActiveStocks?: Stock[];
   constructor(private httpClient: HttpClient, private cdr: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.getMostActiveStocks();
+  }
+
+  public trackByFn(index: number, item: Stock): string {
+    return item?.companyName;
   }
 
   private getMostActiveStocks(): void {

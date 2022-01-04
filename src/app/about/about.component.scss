@@ -37,16 +37,18 @@
   padding: 5px 20px;
   cursor: pointer;
   text-decoration: none;
-  .library-card__header {
-    .library-card__header__icon {
+  color: var(--app-text-color);
+
+  &__header {
+    &_header__icon {
       font-size: 30px;
       color: var(--primary-color);
     }
   }
-  .library-card__info {
-    .library-card__info__title {
+  &__info {
+    &__title {
       font-size: 13px;
-      color: #171717;
+      color: var(--app-text-color);
       font-weight: bold;
       opacity: 0.85;
       margin-right: 10px;
@@ -55,20 +57,20 @@
       text-transform: uppercase;
       transition: color 300ms ease;
     }
-    .library-card__info__text-box {
+    &__text-box {
       position: relative;
       font-size: 14px;
       height: 126px;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: #171717;
+      color: var(--app-text-color);
       line-height: 21px;
       font-weight: 500;
       max-width: 100%;
       text-align: justify;
     }
   }
-  .library-card__action {
+  &__action {
     button {
       font-size: 20px;
       background: #ffffff;
@@ -84,7 +86,7 @@
     }
   }
   &:hover {
-    .library-card__action {
+    &__action {
       button {
         background: #ffd740;
       }
