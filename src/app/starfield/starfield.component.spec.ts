@@ -8,9 +8,8 @@ describe('StarfieldComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StarfieldComponent ]
-    })
-    .compileComponents();
+      declarations: [StarfieldComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
